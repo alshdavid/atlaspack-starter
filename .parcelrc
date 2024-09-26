@@ -1,5 +1,9 @@
 {
   "extends": "@atlaspack/config-default",
+  "resolvers": [
+    "./plugins/resolver.mjs",
+    "..."
+  ],
   "transformers": {
     "*.js": [
       "./plugins/transformer.mjs",
