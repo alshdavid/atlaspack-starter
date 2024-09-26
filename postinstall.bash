@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-    read -p "Use Local Parcel? [Y/n] " use_atlaspack_local
+    read -p "Use Local Atlaspack? [Y/n] " use_atlaspack_local
     if 
       [ "$use_atlaspack_local" = "y" ] || 
       [ "$use_atlaspack_local" = "Y" ] || 
@@ -32,14 +32,14 @@ fi
 atlaspack_src_path="$ATLASPACK_SRC_PATH"
 
 if [ "$atlaspack_src_path" = "" ]; then
-  read -p "Enter Parcel Source Path [default: '\$HOME/Development/atlaspack-bundler/atlaspack'] " atlaspack_src_path
+  read -p "Enter Atlaspack Source Path [default: '\$HOME/Development/atlaspack-bundler/atlaspack'] " atlaspack_src_path
 fi
 
 if [ "$atlaspack_src_path" = "" ]; then
   atlaspack_src_path="$HOME/Development/atlaspack-bundler/atlaspack"
 fi
 
-echo "Parcel Source Path: $atlaspack_src_path"
+echo "Atlaspack Source Path: $atlaspack_src_path"
 echo "selecting 'package.local.json'"
 rm -rf package.json
 rm -rf package.latest.json
@@ -51,3 +51,5 @@ sed -i 's@${ATLASPACK_SRC_PATH}@'"$atlaspack_src_path"'@g' package.json
 git init
 git add .
 git commit -m "Initial commit"
+
+npm install

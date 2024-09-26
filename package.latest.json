@@ -2,7 +2,8 @@
   "name": "@alshdavid/atlaspack-starter",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx atlaspack build"
+    "build": "npx atlaspack build",
+    "build:v3": "npx atlaspack build --feature-flag atlaspackV3=true"
   },
   "targets": {
     "default": {
@@ -11,6 +12,6 @@
     }
   },
   "devDependencies": {
-    "atlaspack": "latest"
+    "@atlaspack/cli": "latest"
   }
 }
