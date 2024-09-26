@@ -1,0 +1,9 @@
+{
+  "extends": "../../atlassian/atlaspack/packages/configs/default/index.json",
+  "transformers": {
+    "*.js": [
+      "./plugins/transformer.mjs",
+      "..."
+    ]
+  }
+}

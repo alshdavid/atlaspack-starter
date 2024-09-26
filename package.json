@@ -1,0 +1,7 @@
+{
+  "name": "@alshdavid/atlaspack-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "bash ./postinstall.bash"
+  }
+}

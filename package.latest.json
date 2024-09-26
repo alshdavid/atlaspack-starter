@@ -1,0 +1,16 @@
+{
+  "name": "@alshdavid/atlaspack-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx atlaspack build"
+  },
+  "targets": {
+    "default": {
+      "source": "./src/index.html",
+      "distDir": "./dist"
+    }
+  },
+  "devDependencies": {
+    "atlaspack": "latest"
+  }
+}
