@@ -5,7 +5,11 @@
     "build": "node ./node_modules/@atlaspack/cli/bin/dev-bin.js build",
     "build:v3": "node ./node_modules/@atlaspack/cli/bin/dev-bin.js build --feature-flag atlaspackV3=true",
     "build-script": "node ./build.mjs",
-    "build-script:v3": "node ./build.mjs --feature-flag atlaspackV3=true"
+    "build-script:v3": "node ./build.mjs --feature-flag atlaspackV3=true",
+    "watch": "bash ./watch.bash build",
+    "watch:v3": "bash ./watch.bash build:v3",
+    "watch-script": "bash ./watch.bash build-script",
+    "watch-script:v3": "bash ./watch.bash build-script:v3"
   },
   "targets": {
     "default": {
@@ -153,6 +157,7 @@
     "@atlaspack/bundler-default": "file:${ATLASPACK_SRC_PATH}/packages/bundlers/default"
   },
   "devDependencies": {
+    "nodemon": "*",
     "@atlaspack/cli": "file:${ATLASPACK_SRC_PATH}/packages/core/cli",
     "@atlaspack/validator-typescript": "file:${ATLASPACK_SRC_PATH}/packages/validators/typescript",
     "@atlaspack/validator-eslint": "file:${ATLASPACK_SRC_PATH}/packages/validators/eslint",
