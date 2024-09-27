@@ -23,7 +23,10 @@ The postinstall script will:
 - Initialize a new git repo
 - Automatically link Atlaspack sources
   - Uses the environment variable `ATLASPACK_SRC_PATH`
-  - OR defaults to `$HOME/Development/atlassian-labs/atlaspack`
+
+```bash
+export ATLASPACK_SRC_PATH="$HOME/Development/atlassian-labs/atlaspack"
+```
 
 ```bash
 npm install
