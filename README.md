@@ -29,6 +29,14 @@ The postinstall script will:
 npm install
 ```
 
+### Atlaspack setup
+
+```bash
+cd $ATLASPACK_SRC_PATH
+yarn build-native
+yarn build-ts # Optional, adds types to build script
+```
+
 ## Usage
 
 ```bash
