@@ -5,7 +5,19 @@
     "moduleResolution": "NodeNext",
     "strict": true,
     "checkJs": true,
-    "declaration": true
+    "declaration": true,
+    "noEmit": true,
+    "paths": {
+      "@atlaspack/core/src/index.js": ["../atlaspack/packages/core/core/index.d.ts"],
+      "@atlaspack/fs/src/index.js": ["../atlaspack/packages/core/fs/index.d.ts"],
+      "@atlaspack/package-manager/src/index.js": ["../atlaspack/packages/core/package-manager/index.d.ts"],
+      "@atlaspack/plugin/src/PluginAPI.js": ["../atlaspack/atlaspack/packages/core/plugin/src/PluginAPI.d.ts"],
+      "@atlaspack/babel-register/index.js": ["../atlaspack/packages/core/core/index.d.ts"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "plugins/**/*.cjs",
+    "./build.cjs"
+  ]
 }

@@ -17,4 +17,4 @@ npx nodemon \
   --ext "*" \
   --delay "250ms" \
   --signal "SIGTERM" \
-  --exec "npm run $NPM_SCRIPT"
+  --exec "clear && npm run $NPM_SCRIPT"
